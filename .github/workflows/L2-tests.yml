@@ -100,7 +100,7 @@ jobs:
         with:
           repository: rdkcentral/entservices-userpreferences
           path: entservices-userpreferences
-          ref: develop
+          ref: feature/RDKEMW-13094
 
       - name: Checkout entservices-testframework
         uses: actions/checkout@v3
