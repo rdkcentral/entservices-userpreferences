@@ -380,8 +380,8 @@ jobs:
           -DCMAKE_DISABLE_FIND_PACKAGE_RFC=ON
           -DCMAKE_DISABLE_FIND_PACKAGE_RBus=ON
           -DUSE_THUNDER_R4=ON
-          -DPLUGIN_L2Tests=${{ env.RDK_SERVICE_L2_TEST }}
-          -DRDK_SERVICE_L2_TEST=ON
+          -DPLUGIN_L2Tests=ON
+          -DRDK_SERVICE_L2_TEST=${{ env.RDK_SERVICE_L2_TEST }}
           -DDS_FOUND=ON
           -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
           &&
@@ -457,8 +457,8 @@ jobs:
           -DCMAKE_DISABLE_FIND_PACKAGE_RBus=ON
           -DAVOUTPUT_TV=OFF
           -DUSE_THUNDER_R4=ON
-          -DPLUGIN_L2Tests=${{ env.RDK_SERVICE_L2_TEST }}
-          -DRDK_SERVICE_L2_TEST=ON
+          -DPLUGIN_L2Tests=ON
+          -DRDK_SERVICE_L2_TEST=${{ env.RDK_SERVICE_L2_TEST }}
           -DDS_FOUND=ON
           -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
           -DPLUGIN_ANALYTICS_SIFT_BACKEND=ON
