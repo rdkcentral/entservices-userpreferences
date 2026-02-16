@@ -163,6 +163,7 @@ namespace WPEFramework {
         
             if (requiresMigration) {
                 LOGINFO("Migration is required for presentation language");
+                printf("Test coverity flow: %s\n");
                 
                 // Case 1: If migration is needed and file exists,
                 //read UILanguage from file, translate to PresentationLanguage and set it in UserSettings
