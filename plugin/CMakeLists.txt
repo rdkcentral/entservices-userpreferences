@@ -21,6 +21,7 @@ set(MODULE_NAME ${NAMESPACE}${PLUGIN_NAME})
 set(PLUGIN_USERPREFERENCE_STARTUPORDER "" CACHE STRING "To configure startup order of UserPreferences plugin")
 
 find_package(${NAMESPACE}Plugins REQUIRED)
+find_package(${NAMESPACE}Helpers REQUIRED)
 find_package(DS)
 find_package(IARMBus)
 find_package(GLIB REQUIRED)
@@ -47,7 +48,6 @@ endif (RDK_SERVICES_L2_TEST)
 
 target_include_directories(${MODULE_NAME}
         PRIVATE
-        ../helpers
         ${IARMBUS_INCLUDE_DIRS}
         ${DS_INCLUDE_DIRS}
         ${GLIB_INCLUDE_DIRS})
@@ -55,6 +55,7 @@ target_include_directories(${MODULE_NAME}
 target_link_libraries(${MODULE_NAME}
         PRIVATE
         ${NAMESPACE}Plugins::${NAMESPACE}Plugins
+        ${NAMESPACE}::${NAMESPACE}Helpers
         ${IARMBUS_LIBRARIES}
         ${DS_LIBRARIES}
         ${GLIB_LIBRARIES})
