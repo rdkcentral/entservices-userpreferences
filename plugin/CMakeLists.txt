@@ -19,7 +19,7 @@ set(PLUGIN_NAME UserPreferences)
 set(MODULE_NAME ${NAMESPACE}${PLUGIN_NAME})
 
 set(PLUGIN_USERPREFERENCE_STARTUPORDER "" CACHE STRING "To configure startup order of UserPreferences plugin")
-
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(${NAMESPACE}Plugins REQUIRED)
 find_package(${NAMESPACE}Helpers REQUIRED)
 find_package(DS)
