@@ -17,6 +17,7 @@
 * limitations under the License.
 **/
 
+
 #include "UserPreferences.h"
 #include "UtilsJsonRpc.h"
 
@@ -33,6 +34,7 @@
 #define API_VERSION_NUMBER_MAJOR 1
 #define API_VERSION_NUMBER_MINOR 0
 #define API_VERSION_NUMBER_PATCH 0
+
 
 using namespace std;
 
