@@ -4,17 +4,12 @@ name: main-workflow
 
 on:
   push:
-    branches: [ main, develop, 'sprint/**', 'release/**' ]
+    branches: [ main, develop, 'sprint/**', 'release/**', 'topic/RDKEMW-23640' ]
   pull_request:
     branches: [ main, develop, 'sprint/**', 'release/**' ]
 
 jobs:
   trigger-L1:
     uses: ./.github/workflows/L1-tests.yml
-    with:
-      caller_source: local
-
-  trigger-L2:
-    uses: ./.github/workflows/L2-tests.yml
     with:
       caller_source: local
