@@ -52,7 +52,11 @@ jobs:
 
       - name: Install packages
         run: >
-          sudo apt update
+          sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google-chrome.sources
+          &&
+          sudo apt-get clean
+          &&
+          sudo apt-get update
           &&
           sudo apt install -y libsqlite3-dev libcurl4-openssl-dev valgrind lcov clang libsystemd-dev libboost-all-dev libwebsocketpp-dev meson libcunit1 libcunit1-dev curl protobuf-compiler-grpc libgrpc-dev libgrpc++-dev
          # &&
