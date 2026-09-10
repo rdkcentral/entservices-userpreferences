@@ -111,7 +111,7 @@ jobs:
         with:
           repository: rdkcentral/Thunder
           path: Thunder
-          ref: develop
+          ref: master
 
       - name: Checkout ThunderTools
         if: steps.cache.outputs.cache-hit != 'true'
