@@ -111,7 +111,7 @@ jobs:
         with:
           repository: rdkcentral/Thunder
           path: Thunder
-          ref: c5d096a69e1a0a77b266b7021e24c6cab940eef0
+          ref: 2c0fcc5529e7da734be558ca6efa05d934dcce31
 
       - name: Checkout ThunderTools
         if: steps.cache.outputs.cache-hit != 'true'
@@ -315,7 +315,7 @@ jobs:
         with:
           repository: rdkcentral/entservices-helpers
           path: entservices-helpers
-          ref: develop
+          ref: 9027e51a44a802812f8976df4438e5393ae36bd5
 
       - name: Build entservices-helpers
         run: >
