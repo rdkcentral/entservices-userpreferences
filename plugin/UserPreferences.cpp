@@ -485,6 +485,7 @@ namespace WPEFramework {
             }
         
             returnIfStringParamNotFound(parameters, SETTINGS_FILE_KEY);
+            LOGINFO("log to test if this line reached: %s", SETTINGS_FILE_KEY);
             string uiLanguage = parameters[SETTINGS_FILE_KEY].String();
 
             userSettings->Register(&_notification);
