@@ -2,7 +2,7 @@
 
 ## Overview
 
-The UserPreferences plugin is a WPEFramework/Thunder-based service that provides backward-compatible UI language preference management. It acts as a compatibility layer between legacy systems and the modern UserSettings plugin, ensuring seamless migration and interoperability.
+The UserPreferences plugin is a Thunder/Thunder-based service that provides backward-compatible UI language preference management. It acts as a compatibility layer between legacy systems and the modern UserSettings plugin, ensuring seamless migration and interoperability.
 
 ## System Architecture
 
