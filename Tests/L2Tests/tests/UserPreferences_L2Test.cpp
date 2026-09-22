@@ -37,7 +37,7 @@
 
 
 using ::testing::NiceMock;
-using namespace WPEFramework;
+using namespace Thunder;
 using testing::StrictMock;
 
 typedef enum : uint32_t {

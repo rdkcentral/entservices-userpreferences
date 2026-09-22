@@ -23,7 +23,7 @@
 #include <interfaces/IUserSettings.h>
 #include <mutex>
 
-namespace WPEFramework {
+namespace Thunder {
     namespace Plugin {
 
         class UserPreferences : public PluginHost::IPlugin, public PluginHost::JSONRPC {
@@ -102,4 +102,4 @@ namespace WPEFramework {
 
         };
     } // namespace Plugin
-} // namespace WPEFramework
+} // namespace Thunder

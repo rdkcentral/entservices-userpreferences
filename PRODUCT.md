@@ -2,7 +2,7 @@
 
 ## Product Overview
 
-The UserPreferences plugin is a Thunder/WPEFramework service that provides backward-compatible user interface language preference management for RDK (Reference Design Kit) devices. It serves as a critical compatibility bridge, enabling legacy applications to continue functioning while the platform transitions to modern settings infrastructure.
+The UserPreferences plugin is a Thunder/Thunder service that provides backward-compatible user interface language preference management for RDK (Reference Design Kit) devices. It serves as a critical compatibility bridge, enabling legacy applications to continue functioning while the platform transitions to modern settings infrastructure.
 
 **Key Value Proposition**: Ensures zero-downtime migration from legacy file-based settings to centralized UserSettings service while maintaining complete API compatibility with existing client applications.
 
