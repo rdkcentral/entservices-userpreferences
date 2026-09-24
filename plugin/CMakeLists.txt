@@ -64,8 +64,6 @@ target_link_libraries(${MODULE_NAME}
         ${IARMBUS_LIBRARIES}
         ${GLIB_LIBRARIES})
 
-add_definitions(-DDS_FOUND)
-
 install(TARGETS ${MODULE_NAME}
         DESTINATION lib/${STORAGE_DIRECTORY}/plugins)
 
