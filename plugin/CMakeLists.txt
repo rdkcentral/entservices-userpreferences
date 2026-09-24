@@ -17,13 +17,14 @@
 
 set(PLUGIN_NAME UserPreferences)
 set(MODULE_NAME ${NAMESPACE}${PLUGIN_NAME})
+set(PLUGIN_IMPLEMENTATION ${MODULE_NAME}Implementation)
 
 set(PLUGIN_USERPREFERENCE_STARTUPORDER "" CACHE STRING "To configure startup order of UserPreferences plugin")
 
 find_package(${NAMESPACE}Plugins REQUIRED)
-find_package(DS)
-find_package(IARMBus)
 find_package(GLIB REQUIRED)
+find_package(${NAMESPACE}Definitions REQUIRED)
+find_package(${NAMESPACE}Helpers REQUIRED)
 
 find_library(GLIB_LIBRARY NAMES glib-2.0 )
 
@@ -34,6 +35,12 @@ add_library(${MODULE_NAME} SHARED
 set_target_properties(${MODULE_NAME} PROPERTIES
         CXX_STANDARD 11
         CXX_STANDARD_REQUIRED YES)
+
+set_target_properties(${PLUGIN_IMPLEMENTATION} PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED YES)
+
+target_compile_definitions(${MODULE_NAME} PRIVATE MODULE_NAME=Plugin_${PLUGIN_NAME})
 
 if (RDK_SERVICE_L2_TEST)
    find_library(TESTMOCKLIB_LIBRARIES NAMES TestMocklib)
@@ -49,14 +56,12 @@ target_include_directories(${MODULE_NAME}
         PRIVATE
         ../helpers
         ${IARMBUS_INCLUDE_DIRS}
-        ${DS_INCLUDE_DIRS}
         ${GLIB_INCLUDE_DIRS})
 
 target_link_libraries(${MODULE_NAME}
         PRIVATE
         ${NAMESPACE}Plugins::${NAMESPACE}Plugins
         ${IARMBUS_LIBRARIES}
-        ${DS_LIBRARIES}
         ${GLIB_LIBRARIES})
 
 add_definitions(-DDS_FOUND)
