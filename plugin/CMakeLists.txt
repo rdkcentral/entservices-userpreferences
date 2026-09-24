@@ -24,7 +24,6 @@ set(PLUGIN_USERPREFERENCE_STARTUPORDER "" CACHE STRING "To configure startup ord
 find_package(${NAMESPACE}Plugins REQUIRED)
 find_package(GLIB REQUIRED)
 find_package(${NAMESPACE}Definitions REQUIRED)
-find_package(${NAMESPACE}Helpers REQUIRED)
 
 find_library(GLIB_LIBRARY NAMES glib-2.0 )
 
