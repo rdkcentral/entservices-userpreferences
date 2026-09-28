@@ -304,6 +304,8 @@ namespace WPEFramework {
                 userSettings->Unregister(&_notification);
                 userSettings->Release();
                 userSettings = nullptr;
+                 
+                userSettings->Release();
             }
             _adminLock.Lock();
             if (nullptr != _service) {
