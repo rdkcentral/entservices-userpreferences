@@ -148,7 +148,6 @@ Update File (if changed) → Cache Last Value
 ### System Libraries
 - **GLib**: KeyFile API for INI file parsing/writing
 - **IARMBus**: Inter-process communication (indirect dependency)
-- **DeviceSettings (DS)**: Device-level settings integration
 
 ## Threading Model
 
