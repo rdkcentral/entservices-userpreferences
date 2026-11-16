@@ -115,7 +115,10 @@ TEST_F(UserPreferencesTest, registeredMethods)
 
 TEST_F(UserPreferencesTest, paramsMissing)
 {
-    EXPECT_EQ(Core::ERROR_GENERAL, handler.Invoke(connection, _T("setUILanguage"), _T("{}"), response));
+
+    EXPECT_EQ(Core::ERROR_NONE, handler.Invoke(connection, _T("setUILanguage"), _T("{}"), response));
+    EXPECT_TRUE(response.find("\"success\":false") != string::npos);
+
 }
 
 TEST_F(UserPreferencesTest, getUILanguage)
