@@ -22,7 +22,6 @@ set(PLUGIN_USERPREFERENCE_STARTUPORDER "" CACHE STRING "To configure startup ord
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(${NAMESPACE}Plugins REQUIRED)
 find_package(${NAMESPACE}Helpers REQUIRED)
-find_package(DS)
 find_package(IARMBus)
 find_package(GLIB REQUIRED)
 
@@ -49,7 +48,6 @@ endif (RDK_SERVICES_L2_TEST)
 target_include_directories(${MODULE_NAME}
         PRIVATE
         ${IARMBUS_INCLUDE_DIRS}
-        ${DS_INCLUDE_DIRS}
         ${GLIB_INCLUDE_DIRS})
 
 target_link_libraries(${MODULE_NAME}
@@ -57,10 +55,7 @@ target_link_libraries(${MODULE_NAME}
         ${NAMESPACE}Plugins::${NAMESPACE}Plugins
         ${NAMESPACE}::${NAMESPACE}Helpers
         ${IARMBUS_LIBRARIES}
-        ${DS_LIBRARIES}
         ${GLIB_LIBRARIES})
-
-add_definitions(-DDS_FOUND)
 
 install(TARGETS ${MODULE_NAME}
         DESTINATION lib/${STORAGE_DIRECTORY}/plugins)
